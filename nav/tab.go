@@ -1,6 +1,7 @@
-package app
+package nav
 
 import (
+	"github.com/norunners/helloreact/app"
 	r "myitcv.io/react"
 )
 
@@ -9,14 +10,14 @@ import (
 type TabDef struct {
 	r.ComponentDef
 
-	setTitle SetTitle
+	setTitle app.SetTitle
 }
 
 type TabProps struct {
 	Name string
 }
 
-func Tab(props TabProps, setTitle SetTitle) *TabDef {
+func Tab(props TabProps, setTitle app.SetTitle) *TabDef {
 	def := &TabDef{setTitle: setTitle}
 	r.BlessElement(def, props)
 	return def

@@ -1,6 +1,7 @@
 package app
 
 import (
+	"github.com/norunners/helloreact/nav"
 	r "myitcv.io/react"
 )
 
@@ -33,10 +34,10 @@ func (def *AppDef) Render() r.Element {
 		r.P(nil,
 			r.S("This is my first GopherJS React App."),
 		),
-		Tab(TabProps{Name: "Create"}, def),
-		Tab(TabProps{Name: "Read"}, def),
-		Tab(TabProps{Name: "Update"}, def),
-		Tab(TabProps{Name: "Delete"}, def),
+		nav.Tab(nav.TabProps{Name: "Create"}, def),
+		nav.Tab(nav.TabProps{Name: "Read"}, def),
+		nav.Tab(nav.TabProps{Name: "Update"}, def),
+		nav.Tab(nav.TabProps{Name: "Delete"}, def),
 	)
 }
 
